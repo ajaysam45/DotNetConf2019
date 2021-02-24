@@ -6,7 +6,7 @@ This application is based on the WPF Samples repository, specifically the [Calcu
 The Azure DevOps Project for this application (including Build Pipelines and status) is available here: https://dev.azure.com/dajaco/DotNetConf2019
 
 ## CI Status
-[![Build Status](https://dajaco.visualstudio.com/DotNetConf2019/_apis/build/status/diverdan92.DotNetConf2019?branchName=master)](https://dajaco.visualstudio.com/DotNetConf2019/_build/latest?definitionId=33&branchName=master)
+[![Build Status](https://dev.azure.com/Ajsamdevops/Test_Devops/_apis/build/status/ajaysam45.DotNetConf2019?branchName=master)](https://dev.azure.com/Ajsamdevops/Test_Devops/_build?definitionId=1&branchName=master)
 
 # Resources
 A more advanced example is available here: https://github.com/microsoft/devops-for-windows-apps. This includes setting up multiple deployment channels, handling package signing and certificate management, hanlding branches, and more. You can also view a conference presentation centered around the more advanced example from Build 2019 [here](https://www.youtube.com/watch?v=vc2edJW34Ps
