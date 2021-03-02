@@ -1,6 +1,8 @@
 # DotNetConf2019 DevOps Demo
 This is the demo application used in the .NET Conf 2019 presentation on DevOps for Windows Apps with Azure DevOps and Visual Studio App Center. This application is used to demonstrate a simple and quick Azure DevOps Build Piepline with App Center integration.
 
+THIS IS A COMMENT 
+
 This application is based on the WPF Samples repository, specifically the [Calculator sample](https://github.com/microsoft/WPF-Samples/tree/master/Sample%20Applications/CalculatorDemo).
 
 The Azure DevOps Project for this application (including Build Pipelines and status) is available here: https://dev.azure.com/dajaco/DotNetConf2019
