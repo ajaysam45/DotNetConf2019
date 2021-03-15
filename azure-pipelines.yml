@@ -9,10 +9,22 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: UseDotNet@2
+- task: SonarCloudPrepare@1
   inputs:
-    packageType: 'sdk'
-    version: '3.0.x'
+    SonarCloud: 'SVCsonarforDesktopApp'
+    organization: 'blazertest'
+    scannerMode: 'MSBuild'
+    projectKey: 'BlazerTest_DotNet_DesktopApp'
+    projectName: 'DesktopApp' 
+
+
+- task: UseDotNet@2
+  displayName: 'Use .NET Core sdk 2.2.x'
+  inputs:
+    version: 2.2.x
+    includePreviewVersions: true
+    performMultiLevelLookup: true
+
 
 - task: DotNetCoreCLI@2
   inputs:
@@ -21,8 +33,13 @@ steps:
     zipAfterPublish: false
     modifyOutputPath: false
     arguments: --output $(Build.ArtifactStagingDirectory)
+	
+- task: SonarCloudAnalyze@1
 
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)'
     artifact: 'Calculator'
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
