@@ -11,11 +11,11 @@ variables:
 steps:
 - task: SonarCloudPrepare@1
   inputs:
-    SonarCloud: 'SVCsonarforDesktopApp'
-    organization: 'blazertest'
+    SonarCloud: 'Sonar_Desktop_test'
+    organization: 'ajsamdevops'
     scannerMode: 'MSBuild'
     projectKey: 'BlazerTest_DotNet_DesktopApp'
-    projectName: 'DesktopApp' 
+    projectName: 'DesktopApp'
 
 
 - task: UseDotNet@2
