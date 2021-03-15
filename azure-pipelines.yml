@@ -33,13 +33,14 @@ steps:
     zipAfterPublish: false
     modifyOutputPath: false
     arguments: --output $(Build.ArtifactStagingDirectory)
-	
+
 - task: SonarCloudAnalyze@1
 
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)'
     artifact: 'Calculator'
+
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
